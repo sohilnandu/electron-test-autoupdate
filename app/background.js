@@ -10,7 +10,29 @@ var devHelper = require('./vendor/electron_boilerplate/dev_helper');
 var windowStateKeeper = require('./vendor/electron_boilerplate/window_state');
 var autoUpdater = require('auto-updater');
 
-//autoUpdater.setFeedURL('http://localhost/latest?version=' + app.getVersion());
+autoUpdater.setFeedURL('http://localhost:6000/update/osx/' + app.getVersion());
+
+autoUpdater.on('checking-for-update', function() {
+    console.log("checking-for-update");
+    console.log(autoUpdater);
+});
+
+autoUpdater.on('update-available', function() {
+    console.log("update-available");
+});
+
+autoUpdater.on('update-not-available', function() {
+    console.log("update-not-available");
+});
+
+autoUpdater.on('update-downloaded', function() {
+    console.log(" update-downloaded");
+});
+//autoUpdater.on('error', function(err){
+//    console.log('auto-updater error: ' + err);
+//});
+
+autoUpdater.checkForUpdates();
 
 var mainWindow;
 
