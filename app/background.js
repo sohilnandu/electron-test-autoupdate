@@ -14,7 +14,6 @@ autoUpdater.setFeedURL('http://localhost:6000/update/osx/' + app.getVersion());
 
 autoUpdater.on('checking-for-update', function() {
     console.log("checking-for-update");
-    console.log(autoUpdater);
 });
 
 autoUpdater.on('update-available', function() {
@@ -26,7 +25,7 @@ autoUpdater.on('update-not-available', function() {
 });
 
 autoUpdater.on('update-downloaded', function() {
-    console.log(" update-downloaded");
+    console.log("update-downloaded");
 });
 //autoUpdater.on('error', function(err){
 //    console.log('auto-updater error: ' + err);
