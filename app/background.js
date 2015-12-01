@@ -28,6 +28,7 @@ autoUpdater.on('update-not-available', function() {
 
 autoUpdater.on('update-downloaded', function() {
     console.log("update-downloaded");
+    autoUpdater.quitAndInstall();
 });
 //autoUpdater.on('error', function(err){
 //    console.log('auto-updater error: ' + err);
