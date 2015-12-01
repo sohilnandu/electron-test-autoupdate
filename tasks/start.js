@@ -49,7 +49,6 @@ var runGulpWatch = function () {
 
 var runApp = function () {
     console.log('Electron: ' + electron);
-    console.log("This is version 0.0.4");
     var app = childProcess.spawn(electron, ['./build'], {
         stdio: 'inherit'
     });

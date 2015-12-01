@@ -18,10 +18,12 @@ autoUpdater.on('checking-for-update', function() {
 
 autoUpdater.on('update-available', function() {
     console.log("update-available");
+
 });
 
 autoUpdater.on('update-not-available', function() {
     console.log("update-not-available");
+
 });
 
 autoUpdater.on('update-downloaded', function() {
@@ -29,6 +31,7 @@ autoUpdater.on('update-downloaded', function() {
 });
 //autoUpdater.on('error', function(err){
 //    console.log('auto-updater error: ' + err);
+//
 //});
 
 autoUpdater.checkForUpdates();
