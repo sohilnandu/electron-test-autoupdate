@@ -6,7 +6,7 @@
 var childProcess = require('child_process');
 var electron = require('electron-prebuilt');
 
-var codeSigningID = 'E4FYDUKE2V'l
+var codeSigningID = 'E4FYDUKE2V';
 
 var sign = childProcess.spawn('codesign', ['--deep', '--force', '--sign', codeSigningID, electron]);
 
